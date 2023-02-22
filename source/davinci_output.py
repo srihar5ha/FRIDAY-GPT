@@ -3,34 +3,6 @@ import openai
 import os
 import requests
 import json
-#from user_input import user_question
-
-# Initialize the text-to-speech engine
-
-# Set up the API request
-#url = "https://api.openai.com/v1/engines/davinci-codex/completions"
-
-#openai.api_key = os.getenv("OPENAI_API_KEY")
-#prompt = f"Answer the following question: {user_question}"
-
-# Send the API request
-#response = requests.post(url, headers=headers, data=json.dumps(data))
-
-
-#model_engine = "davinci"
-
-#max_tokens=15
-#temperature=0.7
-#n=1
-#response = openai.Completion.create(
- #   engine=model_engine,
-  #  prompt=prompt,
-   # temperature=temperature,
-    #max_tokens=max_tokens,
-#)
-
-#print(response.choices[0].text.strip())
-
 
 class Davinci_api:
 
@@ -58,11 +30,4 @@ class Davinci_api:
             return response
         except :
             print("Connection Error ")
-
-
-
-
-#engine=self.model_engine,
-   
-#davinci_response=response.choices[0].text.strip()
 
