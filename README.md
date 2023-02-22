@@ -1,9 +1,11 @@
 # FRIDAY-GPT
 ## A Voice-BOT powered by OPENAI-GPT-3
+###### Author - SRI HARSHA G
 
-Friday-GPT is a Python project that takes voice input from a user and converts it into text,relays it to  OpenAI's GPT-3 for conversational logic. The response is then converted to audio and played back to the user.
+#### About the Project: 
 
-FUN FACT: "FRIDAY" is the reference taken from IRONMAN's AI-BOT :smile::grin::grin:
+* Friday-GPT is a Python project that takes voice input from a user and converts it into text,relays it to  OpenAI's GPT-3 for conversational logic. The response is then converted to audio and played back to the user.
+* FUN FACT: "FRIDAY" is the reference taken from IRONMAN's AI-BOT :smile::grin::grin:
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
