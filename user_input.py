@@ -1,21 +1,24 @@
 import speech_recognition as sr
 
-# initialize the recognizer
-r = sr.Recognizer()
+class GetInputfromUser:
+    
+    def __init__(self):
+        self.recognizer=sr.Recognizer()
 
-# use the microphone as source of input
-with sr.Microphone() as source:
-    print("Speak now:")
-    # adjust for ambient noise
-    r.adjust_for_ambient_noise(source)
-    # listen for user's input
-    audio = r.listen(source)
+    def get_audio_input(self):
+        with sr.Microphone() as source:
+            print("Speak now")
+            self.recognizer.adjust_for_ambient_noise(source)
+            audio = self.recognizer.listen(source,timeout=5)
+            return audio
 
-# recognize the user's input
-try:
-    text = r.recognize_google(audio)
-    print("You said: ", text)
-except sr.UnknownValueError:
-    print("Unable to recognize your speech")
-except sr.RequestError as e:
-    print("Request error: ", e)
+    def recognize_speech(self):
+        audio = self.get_audio_input()
+        try:
+            text = self.recognizer.recognize_google(audio)
+            return text
+        except sr.UnknownValueError:
+            print("Unable to recognize your speech")
+        except sr.RequestError as e:
+            print("Request error: ", e)
+    
